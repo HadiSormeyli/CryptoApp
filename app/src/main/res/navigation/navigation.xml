@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home_item">
+
+    <fragment
+        android:id="@+id/home_item"
+        android:name="com.example.cryptoapp.ui.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_marketFragment"
+            app:destination="@id/market_item" />
+        <action
+            android:id="@+id/action_home_item_to_watchListFragment"
+            app:destination="@id/watch_list_item" />
+        <action
+            android:id="@+id/action_home_item_to_coinDetailsFragment2"
+            app:destination="@id/coinDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/market_item"
+        android:name="com.example.cryptoapp.ui.MarketFragment"
+        android:label=""
+        tools:layout="@layout/fragment_market" >
+        <action
+            android:id="@+id/action_market_item_to_coinDetailsFragment"
+            app:destination="@id/coinDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watch_list_item"
+        android:name="com.example.cryptoapp.ui.WatchListFragment"
+        android:label="" />
+    <fragment
+        android:id="@+id/coinDetailsFragment"
+        android:name="com.example.cryptoapp.ui.CoinDetailsFragment"
+        android:label="CoinDetailsFragment" />
+</navigation>
